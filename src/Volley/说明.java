@@ -1,0 +1,9 @@
+//
+//使用时：
+//
+//1.在清单上添加：
+//注册自定义Application:android:name=".MyApplication"
+//添加网络访问权限
+//
+//2.在关闭程序时，可通过Tag标签取消请求队列中对应的全部请求
+//MyApplication.getHttpQueues().cancelAll("abcGet");
