@@ -1,22 +1,36 @@
+/*
+ * @Title MyAdapterWithCommViewHolder.java
+ * @Copyright Copyright 2010-2015 Yann Software Co,.Ltd All Rights Reserved.
+ * @Description��
+ * @author Yann
+ * @date 2015-8-5 ����10:03:45
+ * @version 1.0
+ */
 package Adapter;
 
 import java.util.List;
-
-import com.example.mycool.R;
-
 import android.content.Context;
-  
-public class MyAdapter<T> extends AllAdapter<String>{  
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.CheckBox;
 
-    public MyAdapter(Context context, List<String> mDatas)  
-    {  
-        super(context, mDatas);  
-    }  
-  
-    
-	@Override
-	public void convert(ViewHolder vHolder, String t) {
-		// TODO Auto-generated method stub
-		vHolder.setText(R.id.text, t);
+/** 
+ * ��ע��
+ * @author Yann
+ * @date 2015-8-5 ����10:03:45
+ */
+public class MyAdapter extends CommonAdapter<String>
+{
+	public MyAdapter(Context context, List<String> datas, int layoutId)
+	{
+		super(context, datas, layoutId);
 	}
-}  
+
+	@Override
+	public void convert(ViewHolder holder, final String bean)
+	{
+		holder.setText(-1,bean);
+
+	}
+
+}

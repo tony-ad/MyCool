@@ -9,6 +9,16 @@ package com.example.mycool;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int rightPadding=0x7f010000;
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
@@ -52,4 +62,35 @@ public final class R {
          */
         public static final int AppTheme=0x7f050001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a BinarySlidingMenu.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #BinarySlidingMenu_rightPadding com.example.mycool:rightPadding}</code></td><td></td></tr>
+           </table>
+           @see #BinarySlidingMenu_rightPadding
+         */
+        public static final int[] BinarySlidingMenu = {
+            0x7f010000
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.mycool.R.attr#rightPadding}
+          attribute's value can be found in the {@link #BinarySlidingMenu} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.mycool:rightPadding
+        */
+        public static final int BinarySlidingMenu_rightPadding = 0;
+    };
 }

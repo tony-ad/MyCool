@@ -1,78 +1,96 @@
+/*
+ * @Title ViewHolder.java
+ * @Copyright Copyright 2010-2015 Yann Software Co,.Ltd All Rights Reserved.
+ * @Descriptionï¿½ï¿½
+ * @author Yann
+ * @date 2015-8-5 ï¿½ï¿½ï¿½ï¿½9:08:31
+ * @version 1.0
+ */
 package Adapter;
 
-import android.R.integer;
-import android.app.ActionBar.LayoutParams;
+
 import android.content.Context;
-import android.gesture.GestureOverlayView;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class ViewHolder  
-{  
+/** 
+ * ï¿½ï¿½×¢ï¿½ï¿½
+ * @author Yann
+ * @date 2015-8-5 ï¿½ï¿½ï¿½ï¿½9:08:31
+ */
+public class ViewHolder
+{
 	private SparseArray<View> mViews;
 	private int mPosition;
 	private View mConvertView;
-	
-	public ViewHolder
-	(Context context,ViewGroup parent,int layoutId,int position){
-		this.mPosition=position;
-		this.mViews=new SparseArray<View>();
-		mConvertView=LayoutInflater.from(context).inflate(layoutId, parent,false);
-		mConvertView.setTag(this);
+
+	public View getConvertView()
+	{
+		return mConvertView;
+	}
+
+	public ViewHolder(Context context, ViewGroup parent, int layoutId, int position)
+	{
+		this.mViews = new SparseArray<View>();
+		this.mPosition = position;
+		this.mConvertView = LayoutInflater.from(context).inflate(layoutId, parent, false);
+		this.mConvertView.setTag(this);
 	}
 	
-	/**
-	 * 
-	 * @param context
-	 * @param convertView
-	 * @param parent
-	 * @param layoutId, ×ÓitemµÄ²¼¾ÖId
-	 * @param position
-	 * @return
-	 */
-	public static ViewHolder get(Context context,View convertView,
-			ViewGroup parent,int layoutId,int position){
-		if(convertView==null){
+	public static ViewHolder get(Context context, View convertView, 
+			ViewGroup parent, int layoutId, int position)
+	{
+		if (null == convertView)
+		{
 			return new ViewHolder(context, parent, layoutId, position);
-		}else {
+		}
+		else
+		{
 			ViewHolder holder = (ViewHolder) convertView.getTag();
-			holder.mPosition=position;
+			holder.mPosition = position;
+			
 			return holder;
 		}
-				
 	}
 	
-	/**
-	 * Í¨¹ýViewId»ñÈ¡¿Ø¼þ
-	 * @param ViewId
+	/** 
+	 * Í¨ï¿½ï¿½viewIdï¿½ï¿½È¡ï¿½Ø¼ï¿½
+	 * @param viewId
 	 * @return
-	 */
-	public <T extends View> T getView(int ViewId){
-		View view = mViews.get(ViewId);
-		if(view==null){
-			view=mConvertView.findViewById(ViewId);
-			mViews.put(ViewId, view);
+	 * @return T
+	 * @author Yann
+	 * @date 2015-8-5 ï¿½ï¿½ï¿½ï¿½9:38:39
+	 */ 
+	public <T extends View>T getView(int viewId)
+	{
+		View view = mViews.get(viewId);
+		
+		if (null == view)
+		{
+			view = mConvertView.findViewById(viewId);
+			mViews.put(viewId, view);
 		}
+		
 		return (T) view;
 	}
 	
-	public View getConvertView(){
-		return mConvertView;
-	}
-	
-	/**
-	 * 
-	 * @param viewId£¬¿Ø¼þµÄid
-	 * @param text£¬ÏÔÊ¾µÄÄÚÈÝ
+	/** 
+	 * ï¿½ï¿½IDÎªviewIdï¿½ï¿½TextViewï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½textï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½this
+	 * @param viewId
+	 * @param text
 	 * @return
-	 */
-	public ViewHolder setText(int viewId,String text){
-		TextView tView = getView(viewId);
-		tView.setText(text);
+	 * @return ViewHolder
+	 * @author Yann
+	 * @date 2015-8-5 ï¿½ï¿½ï¿½ï¿½11:05:17
+	 */ 
+	public ViewHolder setText(int viewId, String text)
+	{
+		TextView tv = getView(viewId);
+		tv.setText(text);
+		
 		return this;
-	}
-	
-}  
+	} 
+}

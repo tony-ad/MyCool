@@ -1,19 +1,19 @@
 //
 //
-//1.Ê¹ÓÃGet·½Ê½ÇëÇóÊı¾İ·µ»ØStringRequest¶ÔÏó
+//1.ä½¿ç”¨Getæ–¹å¼è¯·æ±‚æ•°æ®è¿”å›StringRequestå¯¹è±¡
 ///**
 // *  new StringRequest(int method,String url,Listener listener,ErrorListener errorListener)
-// *  method£ºÇëÇó·½Ê½£¬GetÇëÇóÎªMethod.GET£¬PostÇëÇóÎªMethod.POST
-// *  url£ºÇëÇóµØÖ·
-// *  listener£ºÇëÇó³É¹¦ºóµÄ»Øµ÷
-// *  errorListener£ºÇëÇóÊ§°ÜµÄ»Øµ÷
+// *  methodï¼šè¯·æ±‚æ–¹å¼ï¼ŒGetè¯·æ±‚ä¸ºMethod.GETï¼ŒPostè¯·æ±‚ä¸ºMethod.POST
+// *  urlï¼šè¯·æ±‚åœ°å€
+// *  listenerï¼šè¯·æ±‚æˆåŠŸåçš„å›è°ƒ
+// *  errorListenerï¼šè¯·æ±‚å¤±è´¥çš„å›è°ƒ
 // */
 //private void volleyGet() {
 //    String url = "https://tcc.taobao.com/cc/json/mobile_tel_segment.htm?tel=15850781443";
 //    StringRequest request = new StringRequest(Method.GET, url,
 //            new Listener<String>() {
 //                @Override
-//                public void onResponse(String s) {//sÎªÇëÇó·µ»ØµÄ×Ö·û´®Êı¾İ
+//                public void onResponse(String s) {//sä¸ºè¯·æ±‚è¿”å›çš„å­—ç¬¦ä¸²æ•°æ®
 //                    Toast.makeText(MainActivity.this,s,Toast.LENGTH_LONG).show();
 //                }
 //            },
@@ -23,31 +23,31 @@
 //                    Toast.makeText(MainActivity.this,volleyError.toString(),Toast.LENGTH_LONG).show();
 //                }
 //            });
-//    //ÉèÖÃÇëÇóµÄTag±êÇ©£¬¿ÉÒÔÔÚÈ«¾ÖÇëÇó¶ÓÁĞÖĞÍ¨¹ıTag±êÇ©½øĞĞÇëÇóµÄ²éÕÒ
+//    //è®¾ç½®è¯·æ±‚çš„Tagæ ‡ç­¾ï¼Œå¯ä»¥åœ¨å…¨å±€è¯·æ±‚é˜Ÿåˆ—ä¸­é€šè¿‡Tagæ ‡ç­¾è¿›è¡Œè¯·æ±‚çš„æŸ¥æ‰¾
 //    request.setTag("testGet");
-//    //½«ÇëÇó¼ÓÈëÈ«¾Ö¶ÓÁĞÖĞ
+//    //å°†è¯·æ±‚åŠ å…¥å…¨å±€é˜Ÿåˆ—ä¸­
 //    MyApplication.getHttpQueues().add(request);
 //}
 //
 //
 //
 //
-//2.Ê¹ÓÃPost·½Ê½ÇëÇóÊı¾İ·µ»ØStringRequest¶ÔÏó
+//2.ä½¿ç”¨Postæ–¹å¼è¯·æ±‚æ•°æ®è¿”å›StringRequestå¯¹è±¡
 ///**
-// * Ê¹ÓÃPost·½Ê½·µ»ØStringÀàĞÍµÄÇëÇó½á¹ûÊı¾İ
+// * ä½¿ç”¨Postæ–¹å¼è¿”å›Stringç±»å‹çš„è¯·æ±‚ç»“æœæ•°æ®
 // * 
 // *  new StringRequest(int method,String url,Listener listener,ErrorListener errorListener)
-// *  method£ºÇëÇó·½Ê½£¬GetÇëÇóÎªMethod.GET£¬PostÇëÇóÎªMethod.POST
-// *  url£ºÇëÇóµØÖ·
-// *  listener£ºÇëÇó³É¹¦ºóµÄ»Øµ÷
-// *  errorListener£ºÇëÇóÊ§°ÜµÄ»Øµ÷
+// *  methodï¼šè¯·æ±‚æ–¹å¼ï¼ŒGetè¯·æ±‚ä¸ºMethod.GETï¼ŒPostè¯·æ±‚ä¸ºMethod.POST
+// *  urlï¼šè¯·æ±‚åœ°å€
+// *  listenerï¼šè¯·æ±‚æˆåŠŸåçš„å›è°ƒ
+// *  errorListenerï¼šè¯·æ±‚å¤±è´¥çš„å›è°ƒ
 // */
 //private void volleyPost() {
 //    String url = "https://tcc.taobao.com/cc/json/mobile_tel_segment.htm";
 //    StringRequest request = new StringRequest(Method.POST, url,
 //            new Listener<String>() {
 //                @Override
-//                public void onResponse(String s) {//sÎªÇëÇó·µ»ØµÄ×Ö·û´®Êı¾İ
+//                public void onResponse(String s) {//sä¸ºè¯·æ±‚è¿”å›çš„å­—ç¬¦ä¸²æ•°æ®
 //                    Toast.makeText(MainActivity.this,s,Toast.LENGTH_LONG).show();
 //                }
 //            },
@@ -60,30 +60,30 @@
 //                @Override
 //                protected Map<String, String> getParams() throws AuthFailureError {
 //                    Map<String,String> map = new HashMap<>();
-//                    //½«ÇëÇó²ÎÊıÃûÓë²ÎÊıÖµ·ÅÈëmapÖĞ
+//                    //å°†è¯·æ±‚å‚æ•°åä¸å‚æ•°å€¼æ”¾å…¥mapä¸­
 //                    map.put("tel","15850781443");
 //                    return map;
 //                }
 //            }
 //            ;
-//    //ÉèÖÃÇëÇóµÄTag±êÇ©£¬¿ÉÒÔÔÚÈ«¾ÖÇëÇó¶ÓÁĞÖĞÍ¨¹ıTag±êÇ©½øĞĞÇëÇóµÄ²éÕÒ
+//    //è®¾ç½®è¯·æ±‚çš„Tagæ ‡ç­¾ï¼Œå¯ä»¥åœ¨å…¨å±€è¯·æ±‚é˜Ÿåˆ—ä¸­é€šè¿‡Tagæ ‡ç­¾è¿›è¡Œè¯·æ±‚çš„æŸ¥æ‰¾
 //    request.setTag("testPost");
-//    //½«ÇëÇó¼ÓÈëÈ«¾Ö¶ÓÁĞÖĞ
+//    //å°†è¯·æ±‚åŠ å…¥å…¨å±€é˜Ÿåˆ—ä¸­
 //    MyApplication.getHttpQueues().add(request);
 //}
 //
 //
 //
-//3.Ê¹ÓÃImageRequest¼ÓÔØÍøÂçÍ¼Æ¬
+//3.ä½¿ç”¨ImageRequeståŠ è½½ç½‘ç»œå›¾ç‰‡
 ///**
-// *  Í¨¹ıVolley¼ÓÔØÍøÂçÍ¼Æ¬
+// *  é€šè¿‡VolleyåŠ è½½ç½‘ç»œå›¾ç‰‡
 // *
 // *  new ImageRequest(String url,Listener listener,int maxWidth,int maxHeight,Config decodeConfig,ErrorListener errorListener)
-// *  url£ºÇëÇóµØÖ·
-// *  listener£ºÇëÇó³É¹¦ºóµÄ»Øµ÷
-// *  maxWidth¡¢maxHeight£ºÉèÖÃÍ¼Æ¬µÄ×î´ó¿í¸ß£¬Èç¹û¾ùÉèÎª0Ôò±íÊ¾°´Ô­³ß´çÏÔÊ¾
-// *  decodeConfig£ºÍ¼Æ¬ÏñËØµÄ´¢´æ·½Ê½¡£Config.RGB_565±íÊ¾Ã¿¸öÏñËØÕ¼2¸ö×Ö½Ú£¬Config.ARGB_8888±íÊ¾Ã¿¸öÏñËØÕ¼4¸ö×Ö½ÚµÈ¡£
-// *  errorListener£ºÇëÇóÊ§°ÜµÄ»Øµ÷
+// *  urlï¼šè¯·æ±‚åœ°å€
+// *  listenerï¼šè¯·æ±‚æˆåŠŸåçš„å›è°ƒ
+// *  maxWidthã€maxHeightï¼šè®¾ç½®å›¾ç‰‡çš„æœ€å¤§å®½é«˜ï¼Œå¦‚æœå‡è®¾ä¸º0åˆ™è¡¨ç¤ºæŒ‰åŸå°ºå¯¸æ˜¾ç¤º
+// *  decodeConfigï¼šå›¾ç‰‡åƒç´ çš„å‚¨å­˜æ–¹å¼ã€‚Config.RGB_565è¡¨ç¤ºæ¯ä¸ªåƒç´ å 2ä¸ªå­—èŠ‚ï¼ŒConfig.ARGB_8888è¡¨ç¤ºæ¯ä¸ªåƒç´ å 4ä¸ªå­—èŠ‚ç­‰ã€‚
+// *  errorListenerï¼šè¯·æ±‚å¤±è´¥çš„å›è°ƒ
 // */
 //private void loadImageByVolley() {
 //    String url = "http://pic20.nipic.com/20120409/9188247_091601398179_2.jpg";
@@ -103,32 +103,32 @@
 //                            }
 //                        });
 //
-//    //ÉèÖÃÇëÇóµÄTag±êÇ©£¬¿ÉÒÔÔÚÈ«¾ÖÇëÇó¶ÓÁĞÖĞÍ¨¹ıTag±êÇ©½øĞĞÇëÇóµÄ²éÕÒ
+//    //è®¾ç½®è¯·æ±‚çš„Tagæ ‡ç­¾ï¼Œå¯ä»¥åœ¨å…¨å±€è¯·æ±‚é˜Ÿåˆ—ä¸­é€šè¿‡Tagæ ‡ç­¾è¿›è¡Œè¯·æ±‚çš„æŸ¥æ‰¾
 //    request.setTag("loadImage");
-//    //Í¨¹ıTag±êÇ©È¡ÏûÇëÇó¶ÓÁĞÖĞ¶ÔÓ¦µÄÈ«²¿ÇëÇó
+//    //é€šè¿‡Tagæ ‡ç­¾å–æ¶ˆè¯·æ±‚é˜Ÿåˆ—ä¸­å¯¹åº”çš„å…¨éƒ¨è¯·æ±‚
 //    MyApplication.getHttpQueues().add(request);
 //}
 //
 //
 //
-//4.Ê¹ÓÃImageLoader¼ÓÔØ¼°»º´æÍøÂçÍ¼Æ¬
+//4.ä½¿ç”¨ImageLoaderåŠ è½½åŠç¼“å­˜ç½‘ç»œå›¾ç‰‡
 ///**
-// *  Í¨¹ıImageLoader¼ÓÔØ¼°»º´æÍøÂçÍ¼Æ¬
+// *  é€šè¿‡ImageLoaderåŠ è½½åŠç¼“å­˜ç½‘ç»œå›¾ç‰‡
 //*
 // *  new ImageLoader(RequestQueue queue,ImageCache imageCache)
-// *  queue£ºÇëÇó¶ÓÁĞ
-// *  imageCache£ºÒ»¸öÓÃÓÚÍ¼Æ¬»º´æµÄ½Ó¿Ú£¬Ò»°ãĞèÒª´«ÈëËüµÄÊµÏÖÀà
+// *  queueï¼šè¯·æ±‚é˜Ÿåˆ—
+// *  imageCacheï¼šä¸€ä¸ªç”¨äºå›¾ç‰‡ç¼“å­˜çš„æ¥å£ï¼Œä¸€èˆ¬éœ€è¦ä¼ å…¥å®ƒçš„å®ç°ç±»
 // *
 // *  getImageListener(ImageView view, int defaultImageResId, int errorImageResId)
-// *  view£ºImageView¶ÔÏó
-// *  defaultImageResId£ºÄ¬ÈÏµÄÍ¼Æ¬µÄ×ÊÔ´Id
-// *  errorImageResId£ºÍøÂçÍ¼Æ¬¼ÓÔØÊ§°ÜÊ±ÏÔÊ¾µÄÍ¼Æ¬µÄ×ÊÔ´Id
+// *  viewï¼šImageViewå¯¹è±¡
+// *  defaultImageResIdï¼šé»˜è®¤çš„å›¾ç‰‡çš„èµ„æºId
+// *  errorImageResIdï¼šç½‘ç»œå›¾ç‰‡åŠ è½½å¤±è´¥æ—¶æ˜¾ç¤ºçš„å›¾ç‰‡çš„èµ„æºId
 // */
 //private void loadImageWithCache() {
 //    String url = "http://pic20.nipic.com/20120409/9188247_091601398179_2.jpg";
 //    ImageLoader loader = new ImageLoader(MyApplication.getHttpQueues(), new BitmapCache());
 //    ImageListener listener = loader.getImageListener(image,R.mipmap.ic_launcher,R.mipmap.ic_launcher);
-//    //¼ÓÔØ¼°»º´æÍøÂçÍ¼Æ¬
+//    //åŠ è½½åŠç¼“å­˜ç½‘ç»œå›¾ç‰‡
 //    loader.get(url,listener);
 //}
 //

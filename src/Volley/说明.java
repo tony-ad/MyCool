@@ -1,9 +1,9 @@
 //
-//ʹ��ʱ��
+//使用时：
 //
-//1.���嵥�����ӣ�
-//ע���Զ���Application:android:name=".MyApplication"
-//�����������Ȩ��
+//1.在清单上添加：
+//注册自定义Application:android:name=".MyApplication"
+//添加网络访问权限
 //
-//2.�ڹرճ���ʱ����ͨ��Tag��ǩȡ����������ж�Ӧ��ȫ������
+//2.在关闭程序时，可通过Tag标签取消请求队列中对应的全部请求
 //MyApplication.getHttpQueues().cancelAll("abcGet");
